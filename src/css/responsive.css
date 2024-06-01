@@ -115,4 +115,10 @@
             .footer .section1_ img:last-child {
                 width: 100%;
             }
+            .img_header {
+                width: 30%;
+                padding: 1rem;
+                padding-left: 0;
+                padding-right: 0;
+            }
         }

@@ -1,5 +1,5 @@
 import { FaBars } from 'react-icons/fa6'
-import header_img from '../assets/logo20.png'
+import header_img from '../assets/logo100.png'
 import { useEffect, useState } from 'react'
 
 function Header (){

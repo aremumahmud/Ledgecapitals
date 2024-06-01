@@ -1,4 +1,4 @@
-import footer_img from '../assets/logo11.png'
+import footer_img from '../assets/logo99.png'
 import footer from '../assets/footer.webp'
 import "../css/footer.css";
 import Button from "./button";
