@@ -144,3 +144,7 @@ a {
 .landing-page header .links li:not(:last-child):hover {
     color: #000;
 }
+
+.hamburger {
+    display: none;
+}

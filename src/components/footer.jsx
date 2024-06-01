@@ -8,7 +8,7 @@ function Footer() {
       {" "}
       <div className="footer">
         <div className="section1_">
-            <div>
+            <div className='widen'>
                <img src={footer_img} alt="" />
                  <p className="footer_title">
                  Stay ahead with cutting-edge insights

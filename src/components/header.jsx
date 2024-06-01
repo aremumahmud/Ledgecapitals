@@ -1,6 +1,23 @@
+import { FaBars } from 'react-icons/fa6'
 import header_img from '../assets/logo20.png'
+import { useEffect, useState } from 'react'
 
 function Header (){
+
+    let [on , setOn] =  useState(false)
+    
+    let resize_effect =  ()=>{
+          setOn(false)
+        }
+
+    useEffect(()=>{
+        window.addEventListener('resize' ,resize_effect)
+
+        return ()=>{
+          window.removeEventListener('resize',resize_effect)
+        }
+    },[])
+
     return (
         <div className="landing-page">
         <header>
@@ -14,7 +31,22 @@ function Header (){
               {/* <li><a href="/login">Login</a></li> */}
               <li><a href="/register">Get Started</a></li>
             </ul>
+            <div className="hamburger" onClick={()=>setOn(r=>!r)}>
+              <FaBars />
+            </div>
           </div>
+          {
+              on && <div className="menu">
+          <ul className="links_menu">
+            <a onClick={()=>setOn(r=>false)} href="/">  <li>Home</li></a>
+              <a onClick={()=>setOn(false)} href="#about"><li>About Us</li></a>
+             <a onClick={()=>setOn(false)} href="#contacts"> <li>Contact Us</li></a>
+              {/* <li><a href="/login">Login</a></li> */}
+             <a onClick={()=>setOn(false)} href="/register"> <li>Get Started</li></a>
+            </ul>
+          </div>
+          }
+         
         </header>
        
       </div>

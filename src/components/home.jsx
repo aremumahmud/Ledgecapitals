@@ -23,8 +23,8 @@ function Home(){
         <>
 
         <Header />
-        <Hero />
-        <Marquee />
+       <Hero />
+        <Marquee /> 
         <About />
         <Services />
         <New />
@@ -34,7 +34,7 @@ function Home(){
       <br /><br /><br /><br />
       <Review />
        <Questions />
-      <Footer />
+      <Footer />  {/**/}
       </>
     )
 }
