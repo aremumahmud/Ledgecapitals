@@ -20,7 +20,7 @@ function  Hero(){
 <div className="hero_txt">
       
         <FlipWords duration={5000} className={'flipper'} words={words} /> <br />
-        <Button />
+        <a href="https://forms.gle/VknKPZoK4CBnYFLc8"><Button /></a>
         </div> </div>
     )
 }
