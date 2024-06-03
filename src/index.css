@@ -78,3 +78,7 @@ button:focus-visible {
 * {
     font-family: "Sanomat Sans Trial", sans-serif !important;
 }
+
+body {
+    background-color: #cccccc0d;
+}
