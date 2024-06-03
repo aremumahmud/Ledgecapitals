@@ -17,7 +17,7 @@ console.log(images)
    
 
     Promise.all(Object.values(images).map(img => loadImage(img.default)))
-    .then(() => setLoading(false))
+    .then(() => setTimeout(()=>setLoading(false)),5000)
     .catch(err => console.error('Failed to load images', err));
 
   },[])
