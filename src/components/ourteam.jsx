@@ -14,22 +14,22 @@ function Team (){
 </div>
 <div className="services_ team" style={{    gridTemplateColumns: "1fr 1fr 1fr 1fr"}}>
    
-   <div className="service_card">
+   <div className="service_card up">
     <img src={img} alt="" />
     <p>Christia Mauman</p>
     <p>Chief Excecuting Officer</p>
    </div>
-   <div className="service_card">
+   <div className="service_card up">
     <img src={img1} alt="" />
     <p>Laurie Willsberg</p>
     <p>Head of Acquisitions</p>
    </div>
-   <div className="service_card">
+   <div className="service_card up">
     <img src={img2} alt="" />
     <p>Ronald White</p>
     <p>Managing Partner, Washington</p>
    </div>
-   <div className="service_card">
+   <div className="service_card up">
     <img src={img3} alt="" />
     <p>Stephen Lyde</p>
     <p>Managing Partner, Austrailia</p>

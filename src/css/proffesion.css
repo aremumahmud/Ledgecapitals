@@ -53,8 +53,9 @@
 
 .profession .some_summary .some_wrapper .some {
     padding: 1.5rem;
-    background-color: #cccccc2f;
-    border-radius: 10px;
+    background-color: #151515;
+    /* border-radius: 10px; */
+    color: #ccc;
 }
 
 .profession .some_summary .some_wrapper .some .icon {
