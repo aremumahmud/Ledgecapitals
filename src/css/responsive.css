@@ -41,7 +41,7 @@
                 gap: 3rem;
                 margin-top: 4rem;
                 justify-content: center;
-                flex-direction: column;
+                flex-direction: column !important;
             }
             .services_ {
                 grid-template-columns: 1fr;
@@ -120,5 +120,11 @@
                 padding: 1rem;
                 padding-left: 0;
                 padding-right: 0;
+            }
+            .mobile {
+                display: inline;
+            }
+            .desktop {
+                display: none;
             }
         }
