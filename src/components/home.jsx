@@ -12,6 +12,7 @@ import Review from './our_reviews'
 import Footer from './footer'
 import Questions from './questions'
 import ScrollIndicator from './scrollindicator'
+import Contact from './contact'
 // import copy from '../assets/copy.svg'
 
 // import { FaBars, FaClipboard, FaClipboardCheck, FaHouse, FaPerson, FaPhone, FaPowerOff } from "react-icons/fa6";
@@ -35,6 +36,7 @@ function Home(){
       <br /><br /><br /><br />
       <Review />
        <Questions />
+       <Contact />
       <Footer />  {/**/}
       </>
     )
