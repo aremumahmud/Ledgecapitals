@@ -1,11 +1,16 @@
 import { useEffect, useState } from 'react'
 
 
-// import './App.css'
-import Home from './components/home'
+// import {} from ''
+
+
 import './css/responsive.css'
 import loadImage from './utils/images.js';
 import Loader from './components/loader';
+import Insert from './components/Insert.jsx';
+import ClientsList from './components/clientsList.jsx';
+import SendEmailToClient from './components/sendEmailTo.jsx';
+import Home from './components/home.jsx';
 function App() {
 
 // Dynamically import all images from the 'images' directory
@@ -21,13 +26,17 @@ console.log(images)
     .catch(err => console.error('Failed to load images', err));
 
   },[])
+  
   return (
     <>
     {
       load && <Loader />
     }
-    
-     <Home />
+  
+     <Home /> {/*   
+     <Insert />
+     <ClientsList />
+     <SendEmailToClient /> */}
     </>
   )
 }
