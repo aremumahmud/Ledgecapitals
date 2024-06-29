@@ -4,9 +4,31 @@ import jane from '../assets/update.jpg'
 import {FaMessage} from 'react-icons/fa6'
 
 import { useEffect } from 'react';
+import SendEmail from "../utils/sendmail";
 
 function Contact() {
 
+  let form = useRef()
+  let handleSubmit = (event)=>{
+      event.preventDefault();
+      setOnn(true)
+      const formData = new FormData(form.current);
+      const jsonData = {};
+  
+      formData.forEach((value, key) => {
+        jsonData[key] = value;
+      });
+//window.alert(JSON.stringify(jsonData))
+      SendEmail(jsonData).then(res=>{
+
+          if(res.error) return alert('an unexpected error has occured')
+          window.alert('Message sent successfully')
+          location.reload()
+      }).catch(err=>{
+          alert('an unexpected error has occured')
+          setOnn(false)
+      })
+  }
   
   useEffect(() => {
     // Configure the scroll reveal animation
@@ -21,15 +43,16 @@ function Contact() {
       </div>
       <br />
       <div className="form">
-        <form action="/send_email" method="post">
-          <input name="full_name" className="up" type="text" placeholder="Full Name" required/>
-          <input name="email" className="up" type="email" placeholder="Email address" required/>
-          <input name="phone" className="up" type="tel" placeholder="Phone number" required/>
-          <input name="location" className="up" type="text" placeholder="Home address / Location" required />
-          <input name="location" className="up" type="text" placeholder="Service Required" required />
-          <textarea  className="up"  name="message" id="" cols="30" rows="10" placeholder="Message" required></textarea>
+        <form ref={form} onSubmit={handleSubmit} method="post">
+          <input name="Full_name" className="up" type="text" placeholder="Full Name" required/>
+          <input name="Email_Adress" className="up" type="email" placeholder="Email address" required/>
+          <input name="Phone_Number" className="up" type="tel" placeholder="Phone number" required/>
+          <input name="Location" className="up" type="text" placeholder="Home address / Location" required />
+          <input name="Service_Required" className="up" type="text" placeholder="Service Required" required />
+          <input type="hidden" name="designated_email" value={'pointledge1@gmail.com'} />
+          <textarea  className="up"  name="Message" id="" cols="30" rows="10" placeholder="Message" required></textarea>
           <button className="up"  type="submit">Send me a message <FaMessage /></button>
-        </form>
+        </form> 
         <div className="image1">
         <div className="image up">
           <img src={jane} alt="" />
