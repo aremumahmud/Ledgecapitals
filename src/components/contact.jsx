@@ -3,7 +3,7 @@ import jane from '../assets/update.jpg'
 
 import {FaMessage} from 'react-icons/fa6'
 
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 import SendEmail from "../utils/sendmail";
 
 function Contact() {
