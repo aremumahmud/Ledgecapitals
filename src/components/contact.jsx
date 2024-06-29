@@ -3,11 +3,13 @@ import jane from '../assets/update.jpg'
 
 import {FaMessage} from 'react-icons/fa6'
 
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import SendEmail from "../utils/sendmail";
 
 function Contact() {
 
+
+  let [on , setOnn] = useState(false)
   let form = useRef()
   let handleSubmit = (event)=>{
       event.preventDefault();
@@ -51,7 +53,7 @@ function Contact() {
           <input name="Service_Required" className="up" type="text" placeholder="Service Required" required />
           <input type="hidden" name="designated_email" value={'pointledge1@gmail.com'} />
           <textarea  className="up"  name="Message" id="" cols="30" rows="10" placeholder="Message" required></textarea>
-          <button className="up"  type="submit">Send me a message <FaMessage /></button>
+          <button style={on?{background:'#ccc'}:{}} className="up"  type="submit">Send me a message <FaMessage /></button>
         </form> 
         <div className="image1">
         <div className="image up">
