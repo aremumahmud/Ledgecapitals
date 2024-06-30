@@ -42,7 +42,7 @@ function Header ({isAdmin}){
               <a onClick={()=>setOn(false)} href="#about"><li>About Us</li></a>
              <a onClick={()=>setOn(false)} href="#contacts"> <li>Contact Us</li></a>
               {/* <li><a href="/login">Login</a></li> */}
-             <a onClick={()=>setOn(false)} href="/register"> <li>Get Started</li></a>
+             <a onClick={()=>setOn(false)}  href="https://forms.gle/VknKPZoK4CBnYFLc8"> <li>Get Started</li></a>
             </ul>}
           </div>
           }
