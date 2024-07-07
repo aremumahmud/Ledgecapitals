@@ -7,7 +7,7 @@ function About (){
    let [displayMore , setDisplayMore]= useState(false)
 
     return (
-        <div className="about" style={{flexDirection:'row'}}>
+        <div id='about' className="about" style={{flexDirection:'row'}}>
 <div className="text up">
     <p>About us</p>
     <p>At Ledge Point Finance, we bring 25 years of experience in providing tailored loan and funding solutions. Our mission is to empower businesses to achieve their goals through expert guidance and innovative financial products.
